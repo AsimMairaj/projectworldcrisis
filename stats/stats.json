@@ -1,1 +1,19 @@
-
+[
+    {
+        "country": "Sudan",
+        "iso_a3": "SDN",
+        "poverty": {
+            "mpi": 0.317
+        },
+        "hunger": {
+            "ghi": 25.9
+        },
+        "conflict": {
+            "civilian_deaths_12mo": 5800,
+            "displaced_persons": 8000000
+        },
+        "drought": {
+            "spei": -1.6
+        }
+    }
+]
