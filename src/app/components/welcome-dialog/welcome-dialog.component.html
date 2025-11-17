@@ -1,0 +1,11 @@
+<div *ngIf="isVisible" @fadeInOut class="modal-overlay">
+  <div class="modal-content">
+    <h1>Project World Crisis</h1>
+    <p>Explore countries around the world to discover their risk levels and crisis situations including drought,
+      conflicts, poverty, and more. Click on any country to learn about the challenges they face.</p>
+
+    <button (click)="close()" class="close-button">
+      Get Started
+    </button>
+  </div>
+</div>

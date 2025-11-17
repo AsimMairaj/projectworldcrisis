@@ -2,18 +2,93 @@
     {
         "country": "Sudan",
         "iso_a3": "SDN",
+        "capital": "Khartoum",
+        "population": 48109006,
+        "area_km2": 1886068,
+        "region": "North Africa",
         "poverty": {
-            "mpi": 0.317
+            "severity": 4,
+            "mpi": 0.317,
+            "mpi_description": "Multidimensional Poverty Index - 31.7% severe deprivation",
+            "poverty_headcount_ratio": 46.5,
+            "extreme_poverty_percentage": 20.0,
+            "gini_coefficient": 34.2
         },
         "hunger": {
-            "ghi": 25.9
+            "severity": 4,
+            "ghi": 25.9,
+            "ghi_category": "Serious",
+            "ghi_description": "Global Hunger Index indicates serious hunger levels",
+            "undernourishment_percentage": 19.0,
+            "child_stunting_percentage": 38.2,
+            "child_wasting_percentage": 16.3,
+            "child_mortality_rate": 5.4
         },
         "conflict": {
+            "severity": 5,
             "civilian_deaths_12mo": 5800,
-            "displaced_persons": 8000000
+            "displaced_persons": 8000000,
+            "conflict_status": "Active Armed Conflict",
+            "conflict_description": "Ongoing civil war between Sudanese Armed Forces (SAF) and Rapid Support Forces (RSF) since April 2023",
+            "refugees": 1100000,
+            "internally_displaced": 6900000,
+            "conflict_severity": "Critical",
+            "affected_regions": ["Khartoum", "Darfur", "Kordofan", "Blue Nile"]
         },
         "drought": {
-            "spei": -1.6
-        }
+            "severity": 4,
+            "spei": -1.6,
+            "spei_description": "Standardized Precipitation-Evapotranspiration Index - Moderate to severe drought",
+            "drought_severity": "Moderate-Severe",
+            "water_stress_level": "High",
+            "agricultural_impact": "Severe crop failures in multiple regions",
+            "affected_population": 7200000
+        },
+        "health": {
+            "severity": 4,
+            "life_expectancy": 65.3,
+            "infant_mortality_rate": 44.0,
+            "maternal_mortality_ratio": 295,
+            "access_to_healthcare_percentage": 45.0,
+            "malaria_incidence": "High",
+            "cholera_outbreaks": "Recurring"
+        },
+        "education": {
+            "severity": 4,
+            "literacy_rate": 60.7,
+            "primary_school_enrollment": 68.0,
+            "out_of_school_children": 3200000,
+            "education_disruption": "Severe due to ongoing conflict"
+        },
+        "water_sanitation": {
+            "severity": 4,
+            "access_to_clean_water_percentage": 60.0,
+            "access_to_sanitation_percentage": 35.0,
+            "open_defecation_percentage": 23.0
+        },
+        "economy": {
+            "severity": 5,
+            "gdp_per_capita_usd": 752,
+            "unemployment_rate": 19.5,
+            "inflation_rate": 138.0,
+            "currency": "Sudanese Pound (SDG)",
+            "economic_status": "Severe crisis due to conflict and sanctions"
+        },
+        "humanitarian_needs": {
+            "severity": 5,
+            "people_in_need": 24800000,
+            "humanitarian_access": "Severely restricted",
+            "funding_gap_percentage": 62.0,
+            "priority_needs": ["Food security", "Healthcare", "Shelter", "Water", "Protection"]
+        },
+        "climate_vulnerability": {
+            "severity": 4,
+            "climate_risk_index": "High",
+            "desertification_risk": "Very High",
+            "flood_risk": "Moderate",
+            "temperature_increase_trend": 1.2
+        },
+        "crisis_summary": "Sudan faces a severe humanitarian catastrophe with ongoing armed conflict, mass displacement, food insecurity, drought, and economic collapse. Over half the population requires humanitarian assistance.",
+        "last_updated": "2024-11"
     }
 ]
