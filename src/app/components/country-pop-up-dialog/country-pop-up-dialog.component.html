@@ -6,7 +6,8 @@
   <!-- Dialog Container -->
   <div class="relative w-full max-w-2xl h-[80vh] flex flex-col">
     <!-- Country Header Card - Always Visible -->
-    <div class="bg-gradient-to-br from-slate-200/90 via-slate-100/85 to-gray-100/80 backdrop-blur-md rounded-2xl p-6 shadow-xl mb-4 flex-shrink-0">
+    <div
+      class="bg-gradient-to-br from-slate-200/90 via-slate-100/85 to-gray-100/80 backdrop-blur-md rounded-2xl p-6 shadow-xl mb-4 flex-shrink-0">
       <div class="flex items-start gap-4">
         <span class="fi fi-{{ flagCode }} h-[96px] w-[128px] rounded-lg"></span>
         <div class="flex-1">
@@ -14,8 +15,10 @@
           <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
             <div><span class="font-semibold">Capital: </span> {{ countryData.capital }}</div>
             <div><span class="font-semibold">Region: </span> {{ countryData.region }}</div>
-            <div><span class="font-semibold">Population: </span> <span [appCountUp]="countryData.population" [shouldAnimate]="true"></span></div>
-            <div><span class="font-semibold">Area: </span> <span [appCountUp]="countryData.area_km2" suffix=" km²" [shouldAnimate]="true"></span></div>
+            <div><span class="font-semibold">Population: </span> <span [appCountUp]="countryData.population"
+                [shouldAnimate]="true"></span></div>
+            <div><span class="font-semibold">Area: </span> <span [appCountUp]="countryData.area_km2" suffix=" km²"
+                [shouldAnimate]="true"></span></div>
           </div>
         </div>
       </div>
@@ -34,27 +37,38 @@
           [class.pointer-events-none]="currentCardIndex !== 0" style="transition: opacity 0.5s ease-in-out;">
           <div class="flex justify-between items-start mb-3">
             <h2 class="text-2xl font-bold text-gray-800">Poverty</h2>
-            <span class="px-3 py-1 rounded-full text-xs font-semibold {{ getSeverityChipClass(countryData.poverty.severity) }} shadow-md">
+            <span
+              class="px-3 py-1 rounded-full text-xs font-semibold {{ getSeverityChipClass(countryData.poverty.severity) }} shadow-md">
               {{ getSeverityLabel(countryData.poverty.severity) }} ({{ countryData.poverty.severity }}/5)
             </span>
           </div>
-          <div class="grid grid-cols-2 gap-3 text-sm">
-            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg">
-              <div class="text-gray-500 text-xs">MPI</div>
-              <div class="font-semibold text-gray-800"><span [appCountUp]="countryData.poverty.mpi" [shouldAnimate]="currentCardIndex === 0"></span></div>
-              <div class="text-xs text-gray-600 mt-1">{{ countryData.poverty.mpi_description }}</div>
+          <div class="grid grid-cols-2 gap-3 text-sm justify-center">
+            <div class="bg-white/60 backdrop-blur-sm flex flex-col items-center p-3 rounded-lg">
+              <div class="text-gray-500 text-sm">Multidimensional Poverty Index</div>
+              <div class="text-6xl font-semibold text-gray-800"><span [appCountUp]="countryData.poverty.mpi"
+                  [shouldAnimate]="currentCardIndex === 0"></span></div>
+              <div class="text-sm text-gray-600 mt-1 text-center">{{ countryData.poverty.mpi_description }}</div>
             </div>
-            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg">
-              <div class="text-gray-500 text-xs">Poverty Headcount</div>
-              <div class="font-semibold text-gray-800"><span [appCountUp]="countryData.poverty.poverty_headcount_ratio" suffix="%" [shouldAnimate]="currentCardIndex === 0"></span></div>
+            <div class="bg-white/60 backdrop-blur-sm items-center p-3 flex flex-col rounded-lg">
+              <div class="text-gray-500 text-sm">Poverty Headcount</div>
+              <div class="font-semibold text-6xl text-gray-800"><span
+                  [appCountUp]="countryData.poverty.poverty_headcount_ratio" suffix="%"
+                  [shouldAnimate]="currentCardIndex === 0"></span></div>
+              <div class="text-sm text-gray-600 mt-1 text-center">Population below poverty line</div>
             </div>
-            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg">
-              <div class="text-gray-500 text-xs">Extreme Poverty</div>
-              <div class="font-semibold text-gray-800"><span [appCountUp]="countryData.poverty.extreme_poverty_percentage" suffix="%" [shouldAnimate]="currentCardIndex === 0"></span></div>
+            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg items-center flex flex-col">
+              <div class="text-gray-500 text-sm">Extreme Poverty</div>
+              <div class="font-semibold text-6xl text-gray-800"><span
+                  [appCountUp]="countryData.poverty.extreme_poverty_percentage" suffix="%"
+                  [shouldAnimate]="currentCardIndex === 0"></span></div>
+              <div class="text-sm text-gray-600 mt-1 text-center">Living on less than $2.15/day</div>
             </div>
-            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg">
-              <div class="text-gray-500 text-xs">Gini Coefficient</div>
-              <div class="font-semibold text-gray-800"><span [appCountUp]="countryData.poverty.gini_coefficient" [shouldAnimate]="currentCardIndex === 0"></span></div>
+            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg items-center flex flex-col">
+              <div class="text-gray-500 text-sm">Gini Coefficient</div>
+              <div class="font-semibold text-6xl text-gray-800"><span
+                  [appCountUp]="countryData.poverty.gini_coefficient" [shouldAnimate]="currentCardIndex === 0"></span>
+              </div>
+              <div class="text-sm text-gray-600 mt-1 text-center">Measure of income inequality</div>
             </div>
           </div>
         </div>
@@ -66,32 +80,42 @@
           [class.pointer-events-none]="currentCardIndex !== 1" style="transition: opacity 0.5s ease-in-out;">
           <div class="flex justify-between items-start mb-3">
             <h2 class="text-2xl font-bold text-gray-800">Hunger</h2>
-            <span class="px-3 py-1 rounded-full text-xs font-semibold {{ getSeverityChipClass(countryData.hunger.severity) }} shadow-md">
+            <span
+              class="px-3 py-1 rounded-full text-xs font-semibold {{ getSeverityChipClass(countryData.hunger.severity) }} shadow-md">
               {{ getSeverityLabel(countryData.hunger.severity) }} ({{ countryData.hunger.severity }}/5)
             </span>
           </div>
-          <div class="mb-3 p-3 bg-white/60 backdrop-blur-sm rounded-lg">
+          <div class="mb-3 p-3 bg-white/60 backdrop-blur-sm items-center flex flex-col rounded-lg">
             <div class="text-xs text-gray-500">Global Hunger Index</div>
-            <div class="font-bold text-lg text-orange-700"><span [appCountUp]="countryData.hunger.ghi" [shouldAnimate]="currentCardIndex === 1"></span> - {{
+            <div class="font-bold text-2xl text-orange-700"><span [appCountUp]="countryData.hunger.ghi"
+                [shouldAnimate]="currentCardIndex === 1"></span> - {{
               countryData.hunger.ghi_category }}</div>
             <div class="text-xs text-gray-600 mt-1">{{ countryData.hunger.ghi_description }}</div>
           </div>
           <div class="grid grid-cols-2 gap-3 text-sm">
-            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg">
-              <div class="text-gray-500 text-xs">Undernourishment</div>
-              <div class="font-semibold text-gray-800"><span [appCountUp]="countryData.hunger.undernourishment_percentage" suffix="%" [shouldAnimate]="currentCardIndex === 1"></span></div>
+            <div class="bg-white/60 backdrop-blur-sm p-3 items-center flex flex-col rounded-lg">
+              <div class="text-gray-500 text-sm">Undernourishment</div>
+              <div class="font-semibold text-5xl text-gray-800"><span
+                  [appCountUp]="countryData.hunger.undernourishment_percentage" suffix="%"
+                  [shouldAnimate]="currentCardIndex === 1"></span></div>
             </div>
-            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg">
-              <div class="text-gray-500 text-xs">Child Stunting</div>
-              <div class="font-semibold text-gray-800"><span [appCountUp]="countryData.hunger.child_stunting_percentage" suffix="%" [shouldAnimate]="currentCardIndex === 1"></span></div>
+            <div class="bg-white/60 backdrop-blur-sm p-3 items-center flex flex-col rounded-lg">
+              <div class="text-gray-500 text-sm">Child Stunting</div>
+              <div class="font-semibold text-5xl text-gray-800"><span
+                  [appCountUp]="countryData.hunger.child_stunting_percentage" suffix="%"
+                  [shouldAnimate]="currentCardIndex === 1"></span></div>
             </div>
-            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg">
-              <div class="text-gray-500 text-xs">Child Wasting</div>
-              <div class="font-semibold text-gray-800"><span [appCountUp]="countryData.hunger.child_wasting_percentage" suffix="%" [shouldAnimate]="currentCardIndex === 1"></span></div>
+            <div class="bg-white/60 backdrop-blur-sm p-3 items-center flex flex-col rounded-lg">
+              <div class="text-gray-500 text-sm">Child Wasting</div>
+              <div class="font-semibold text-5xl text-gray-800"><span
+                  [appCountUp]="countryData.hunger.child_wasting_percentage" suffix="%"
+                  [shouldAnimate]="currentCardIndex === 1"></span></div>
             </div>
-            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg">
-              <div class="text-gray-500 text-xs">Child Mortality</div>
-              <div class="font-semibold text-gray-800"><span [appCountUp]="countryData.hunger.child_mortality_rate" suffix="%" [shouldAnimate]="currentCardIndex === 1"></span></div>
+            <div class="bg-white/60 backdrop-blur-sm p-3 items-center flex flex-col rounded-lg">
+              <div class="text-gray-500 text-sm">Child Mortality</div>
+              <div class="font-semibold text-5xl text-gray-800"><span
+                  [appCountUp]="countryData.hunger.child_mortality_rate" suffix="%"
+                  [shouldAnimate]="currentCardIndex === 1"></span></div>
             </div>
           </div>
         </div>
@@ -103,7 +127,8 @@
           [class.pointer-events-none]="currentCardIndex !== 2" style="transition: opacity 0.5s ease-in-out;">
           <div class="flex justify-between items-start mb-3">
             <h2 class="text-2xl font-bold text-gray-800">Conflict</h2>
-            <span class="px-3 py-1 rounded-full text-xs font-semibold {{ getSeverityChipClass(countryData.conflict.severity) }} shadow-md">
+            <span
+              class="px-3 py-1 rounded-full text-xs font-semibold {{ getSeverityChipClass(countryData.conflict.severity) }} shadow-md">
               {{ getSeverityLabel(countryData.conflict.severity) }} ({{ countryData.conflict.severity }}/5)
             </span>
           </div>
@@ -111,23 +136,30 @@
             <div class="font-bold text-red-700">{{ countryData.conflict.conflict_status }}</div>
             <div class="text-xs text-gray-600 mt-1">{{ countryData.conflict.conflict_description }}</div>
           </div>
-          <div class="grid grid-cols-2 gap-3 text-sm">
-            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg">
-              <div class="text-gray-500 text-xs">Civilian Deaths (12mo)</div>
-              <div class="font-semibold text-gray-800"><span [appCountUp]="countryData.conflict.civilian_deaths_12mo" [shouldAnimate]="currentCardIndex === 2"></span>
+          <div class="flex justify-between text-sm">
+            <div class="bg-white/60 backdrop-blur-sm items-center flex flex-col p-3 rounded-lg">
+              <div class="text-gray-500 text-sm">Civ. Deaths (12mo)</div>
+              <div class="font-semibold text-3xl text-gray-800"><span
+                  [appCountUp]="countryData.conflict.civilian_deaths_12mo"
+                  [shouldAnimate]="currentCardIndex === 2"></span>
               </div>
             </div>
-            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg">
-              <div class="text-gray-500 text-xs">Displaced Persons</div>
-              <div class="font-semibold text-gray-800"><span [appCountUp]="countryData.conflict.displaced_persons" [shouldAnimate]="currentCardIndex === 2"></span></div>
+            <div class="bg-white/60 backdrop-blur-sm p-3 items-center flex flex-col rounded-lg">
+              <div class="text-gray-500 text-sm">Displaced Persons</div>
+              <div class="font-semibold text-3xl text-gray-800"><span
+                  [appCountUp]="countryData.conflict.displaced_persons" [shouldAnimate]="currentCardIndex === 2"></span>
+              </div>
             </div>
-            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg">
-              <div class="text-gray-500 text-xs">Refugees</div>
-              <div class="font-semibold text-gray-800"><span [appCountUp]="countryData.conflict.refugees" [shouldAnimate]="currentCardIndex === 2"></span></div>
+            <div class="bg-white/60 backdrop-blur-sm p-3 items-center flex flex-col rounded-lg">
+              <div class="text-gray-500 text-sm">Refugees</div>
+              <div class="font-semibold text-3xl text-gray-800"><span [appCountUp]="countryData.conflict.refugees"
+                  [shouldAnimate]="currentCardIndex === 2"></span></div>
             </div>
-            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg">
-              <div class="text-gray-500 text-xs">Internally Displaced</div>
-              <div class="font-semibold text-gray-800"><span [appCountUp]="countryData.conflict.internally_displaced" [shouldAnimate]="currentCardIndex === 2"></span>
+            <div class="bg-white/60 backdrop-blur-sm p-3 items-center flex flex-col rounded-lg">
+              <div class="text-gray-500 text-sm">Internally Displaced</div>
+              <div class="font-semibold text-3xl text-gray-800"><span
+                  [appCountUp]="countryData.conflict.internally_displaced"
+                  [shouldAnimate]="currentCardIndex === 2"></span>
               </div>
             </div>
           </div>
@@ -149,31 +181,34 @@
           [class.pointer-events-none]="currentCardIndex !== 3" style="transition: opacity 0.5s ease-in-out;">
           <div class="flex justify-between items-start mb-3">
             <h2 class="text-2xl font-bold text-gray-800">Drought & Water</h2>
-            <span class="px-3 py-1 rounded-full text-xs font-semibold {{ getSeverityChipClass(countryData.drought.severity) }} shadow-md">
+            <span
+              class="px-3 py-1 rounded-full text-xs font-semibold {{ getSeverityChipClass(countryData.drought.severity) }} shadow-md">
               {{ getSeverityLabel(countryData.drought.severity) }} ({{ countryData.drought.severity }}/5)
             </span>
           </div>
-          <div class="mb-3 p-3 bg-white/60 backdrop-blur-sm rounded-lg">
-            <div class="text-xs text-gray-500">SPEI (Drought Index)</div>
-            <div class="font-bold text-yellow-700"><span [appCountUp]="countryData.drought.spei" [shouldAnimate]="currentCardIndex === 3"></span></div>
-            <div class="text-xs text-gray-600 mt-1">{{ countryData.drought.spei_description }}</div>
+          <div class="mb-3 p-3 bg-white/60 items-center flex flex-col backdrop-blur-sm rounded-lg">
+            <div class="text-sm text-gray-500">SPEI (Drought Index)</div>
+            <div class="font-bold text-2xl text-yellow-700"><span [appCountUp]="countryData.drought.spei"
+                [shouldAnimate]="currentCardIndex === 3"></span></div>
+            <div class="text-sm text-gray-600">{{ countryData.drought.spei_description }}</div>
           </div>
-          <div class="grid grid-cols-2 gap-3 text-sm">
+          <div class="grid grid-cols-3 gap-3 text-sm">
             <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg">
-              <div class="text-gray-500 text-xs">Drought Severity</div>
+              <div class="text-gray-500 text-sm">Drought Severity</div>
               <div class="font-semibold text-gray-800">{{ countryData.drought.drought_severity }}</div>
             </div>
             <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg">
-              <div class="text-gray-500 text-xs">Water Stress Level</div>
+              <div class="text-gray-500 text-sm">Water Stress Level</div>
               <div class="font-semibold text-gray-800">{{ countryData.drought.water_stress_level }}</div>
             </div>
-            <div class="col-span-2 bg-white/60 backdrop-blur-sm p-3 rounded-lg">
-              <div class="text-gray-500 text-xs">Agricultural Impact</div>
-              <div class="font-semibold text-gray-800">{{ countryData.drought.agricultural_impact }}</div>
+            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-lg">
+              <div class="text-gray-500 text-sm">Affected Population</div>
+              <div class="font-semibold text-gray-800"><span [appCountUp]="countryData.drought.affected_population"
+                  [shouldAnimate]="currentCardIndex === 3"></span></div>
             </div>
-            <div class="col-span-2 bg-white/60 backdrop-blur-sm p-3 rounded-lg">
-              <div class="text-gray-500 text-xs">Affected Population</div>
-              <div class="font-semibold text-gray-800"><span [appCountUp]="countryData.drought.affected_population" [shouldAnimate]="currentCardIndex === 3"></span></div>
+            <div class="col-span-3 bg-white/60 backdrop-blur-sm p-3 rounded-lg">
+              <div class="text-gray-500 text-sm">Agricultural Impact</div>
+              <div class="font-semibold text-gray-800">{{ countryData.drought.agricultural_impact }}</div>
             </div>
           </div>
         </div>

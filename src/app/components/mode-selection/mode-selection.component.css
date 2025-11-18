@@ -28,12 +28,14 @@
   transform-style: preserve-3d;
   backface-visibility: hidden;
   will-change: transform, opacity;
+  /* Use GPU acceleration for smoother transforms */
+  transform: translateZ(0);
 }
 
-/* Smooth scroll behavior */
-.scroll-smooth {
+/* Smooth scroll behavior - disabled to prevent conflicts with snap */
+/* .scroll-smooth {
   scroll-behavior: smooth;
-}
+} */
 
 /* Prevent text selection during scroll */
 .mode-scroll-container {

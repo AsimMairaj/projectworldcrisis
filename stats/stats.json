@@ -9,7 +9,7 @@
         "poverty": {
             "severity": 4,
             "mpi": 0.317,
-            "mpi_description": "Multidimensional Poverty Index - 31.7% severe deprivation",
+            "mpi_description": "31.7% severe deprivation",
             "poverty_headcount_ratio": 46.5,
             "extreme_poverty_percentage": 20.0,
             "gini_coefficient": 34.2
