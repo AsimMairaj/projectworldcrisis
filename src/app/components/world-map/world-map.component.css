@@ -1,0 +1,38 @@
+/* --- GLOBAL FULL-SCREEN OVERRIDE --- */
+
+/* 1. Ensure HTML and Body use full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Target the main Angular host tag and force it to fill the viewport */
+app-root {
+    display: flex; 
+    height: 100%; 
+    width: 100%; 
+}
+/* 3. Target your map component's host tag to ensure it expands */
+app-world-map {
+    display: flex; 
+    flex-grow: 1; 
+    height: 100%;
+    width: 100%;
+}
+
+#map {
+  background-color: transparent;  
+}
+.leaflet-container {
+  background: none !important;
+}
+.leaflet-tile-pane {
+  display: none !important; 
+}
+
+#map {
+    height: 100%; 
+    width: 100%;
+    background-color: transparent !important; 
+}
