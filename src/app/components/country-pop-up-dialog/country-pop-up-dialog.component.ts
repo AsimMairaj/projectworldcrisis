@@ -194,6 +194,14 @@ export class CountryPopUpDialogComponent implements OnInit, AfterViewInit {
     return 'bg-green-600 text-white';
   }
 
+  getSeverityGradientClass(severity: number): string {
+    if (severity >= 5) return 'text-gradient-red';
+    if (severity >= 4) return 'text-gradient-orange';
+    if (severity >= 3) return 'text-gradient-yellow';
+    if (severity >= 2) return 'text-gradient-blue';
+    return 'text-gradient-green';
+  }
+
   close(): void {
     this.closeDialog.emit();
   }

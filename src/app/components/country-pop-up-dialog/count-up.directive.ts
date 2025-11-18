@@ -9,6 +9,7 @@ export class CountUpDirective implements OnInit, OnChanges {
   @Input() duration: number = 2000; // Duration in milliseconds
   @Input() suffix: string = ''; // For %, km², etc.
   @Input() shouldAnimate: boolean = false; // Control when to animate
+  @Input() gradientClass: string = ''; // Gradient class for text color
 
   private animationFrameId?: number;
   private hasAnimated: boolean = false;
@@ -16,6 +17,11 @@ export class CountUpDirective implements OnInit, OnChanges {
   constructor(private el: ElementRef) {}
 
   ngOnInit(): void {
+    // Apply gradient class if provided
+    if (this.gradientClass) {
+      this.el.nativeElement.classList.add(this.gradientClass);
+    }
+
     // Set initial value to 0 or the actual value if not animating
     if (this.shouldAnimate) {
       this.el.nativeElement.textContent = '0' + this.suffix;
@@ -25,6 +31,11 @@ export class CountUpDirective implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    // Apply gradient class if it changes
+    if (changes['gradientClass'] && this.gradientClass) {
+      this.el.nativeElement.classList.add(this.gradientClass);
+    }
+
     // Trigger animation when shouldAnimate changes to true
     if (changes['shouldAnimate'] && changes['shouldAnimate'].currentValue === true && !this.hasAnimated) {
       this.hasAnimated = true;
