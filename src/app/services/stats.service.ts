@@ -58,7 +58,7 @@ export interface CountryStats {
 export class StatsService {
   private statsCache: CountryStats[] | null = null;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getStats(): Observable<CountryStats[]> {
     if (this.statsCache) {
@@ -77,12 +77,16 @@ export class StatsService {
     );
   }
 
-  getSeverityForCountry(iso_a3: string, mode: string): number {
+  getSeverityForCountry(countryName: string, mode: string): number {
     if (!this.statsCache) {
       return 0; // Return 0 if data not loaded yet
     }
 
-    const country = this.statsCache.find(c => c.iso_a3 === iso_a3);
+    // Try to find by country name (case-insensitive)
+    const country = this.statsCache.find(c =>
+      c.country.toLowerCase() === countryName.toLowerCase()
+    );
+
     if (!country) {
       return 0; // Country not found
     }
@@ -117,15 +121,15 @@ export class StatsService {
     // Map severity (1-5) to colors: 1=green, 2=yellow-green, 3=yellow, 4=orange, 5=red
     switch (severity) {
       case 1:
-        return '#22c55e'; // green-500
+        return '#4ade80'; // green-400
       case 2:
-        return '#84cc16'; // lime-500
+        return '#60a5fa'; // blue-400
       case 3:
-        return '#eab308'; // yellow-500
+        return '#facc15'; // yellow-400
       case 4:
-        return '#f97316'; // orange-500
+        return '#fb923c'; // orange-400
       case 5:
-        return '#ef4444'; // red-500
+        return '#f87171'; // red-400
       default:
         return '#9ca3af'; // gray-400 (default/no data)
     }

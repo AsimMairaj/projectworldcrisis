@@ -92,15 +92,16 @@ export class WorldMapComponent implements AfterViewInit, OnDestroy {
 
     // Get all countries from stats and add their colors
     this.statsService.getStats().subscribe(stats => {
-      // Build color expression based on ISO3166-1-Alpha-3 codes (the property name in the GeoJSON)
-      const colorExpression: any[] = ['match', ['get', 'ISO3166-1-Alpha-3']];
+      // Build color expression based on country name (the 'name' property in the GeoJSON)
+      const colorExpression: any[] = ['match', ['get', 'name']];
 
       // Add each country's color based on severity
       if (stats.length > 0) {
         stats.forEach(country => {
-          const severity = this.statsService.getSeverityForCountry(country.iso_a3, this.currentMode!.id);
+          const severity = this.statsService.getSeverityForCountry(country.country, this.currentMode!.id);
           const color = this.statsService.getSeverityColor(severity);
-          colorExpression.push(country.iso_a3, color);
+          // Use country name as the key to avoid duplicates
+          colorExpression.push(country.country, color);
         });
       }
 
