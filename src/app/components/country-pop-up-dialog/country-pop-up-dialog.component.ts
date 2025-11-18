@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter, OnInit, HostListener, ElementRe
 import { CommonModule } from '@angular/common';
 import statsData from '../../../../stats/stats.json';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { CountUpDirective } from './count-up.directive';
 
 interface CountryData {
   country: string;
@@ -14,12 +15,6 @@ interface CountryData {
   hunger: any;
   conflict: any;
   drought: any;
-  health: any;
-  education: any;
-  water_sanitation: any;
-  economy: any;
-  humanitarian_needs: any;
-  climate_vulnerability: any;
   crisis_summary: string;
   last_updated: string;
 }
@@ -46,7 +41,7 @@ interface CardInfo {
       transition('* => void', animate('300ms ease-out'))
     ]),
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, CountUpDirective],
   templateUrl: './country-pop-up-dialog.component.html',
   styleUrls: ['./country-pop-up-dialog.component.css']
 })
@@ -103,12 +98,6 @@ export class CountryPopUpDialogComponent implements OnInit, AfterViewInit {
       { id: 'hunger', title: 'Hunger', data: this.countryData.hunger, severity: this.countryData.hunger.severity },
       { id: 'conflict', title: 'Conflict', data: this.countryData.conflict, severity: this.countryData.conflict.severity },
       { id: 'drought', title: 'Drought & Water', data: this.countryData.drought, severity: this.countryData.drought.severity },
-      { id: 'health', title: 'Health', data: this.countryData.health, severity: this.countryData.health.severity },
-      { id: 'education', title: 'Education', data: this.countryData.education, severity: this.countryData.education.severity },
-      { id: 'water_sanitation', title: 'Water & Sanitation', data: this.countryData.water_sanitation, severity: this.countryData.water_sanitation.severity },
-      { id: 'economy', title: 'Economy', data: this.countryData.economy, severity: this.countryData.economy.severity },
-      { id: 'humanitarian', title: 'Humanitarian Needs', data: this.countryData.humanitarian_needs, severity: this.countryData.humanitarian_needs.severity },
-      { id: 'climate', title: 'Climate Vulnerability', data: this.countryData.climate_vulnerability, severity: this.countryData.climate_vulnerability.severity }
     ];
   }
 
@@ -181,11 +170,28 @@ export class CountryPopUpDialogComponent implements OnInit, AfterViewInit {
   }
 
   getSeverityBackgroundClass(severity: number): string {
-    if (severity >= 5) return 'bg-red-100/80';
-    if (severity >= 4) return 'bg-orange-100/80';
-    if (severity >= 3) return 'bg-yellow-100/80';
-    if (severity >= 2) return 'bg-blue-100/80';
-    return 'bg-green-100/80';
+    // Return gradient classes based on severity
+    if (severity >= 5) return 'bg-gradient-to-br from-red-200/90 via-red-100/85 to-orange-100/80';
+    if (severity >= 4) return 'bg-gradient-to-br from-orange-200/90 via-orange-100/85 to-yellow-100/80';
+    if (severity >= 3) return 'bg-gradient-to-br from-yellow-200/90 via-yellow-100/85 to-amber-100/80';
+    if (severity >= 2) return 'bg-gradient-to-br from-blue-200/90 via-blue-100/85 to-cyan-100/80';
+    return 'bg-gradient-to-br from-green-200/90 via-green-100/85 to-emerald-100/80';
+  }
+
+  getSeverityLabel(severity: number): string {
+    if (severity >= 5) return 'Critical';
+    if (severity >= 4) return 'Severe';
+    if (severity >= 3) return 'High';
+    if (severity >= 2) return 'Moderate';
+    return 'Low';
+  }
+
+  getSeverityChipClass(severity: number): string {
+    if (severity >= 5) return 'bg-red-600 text-white';
+    if (severity >= 4) return 'bg-orange-600 text-white';
+    if (severity >= 3) return 'bg-yellow-600 text-white';
+    if (severity >= 2) return 'bg-blue-600 text-white';
+    return 'bg-green-600 text-white';
   }
 
   close(): void {

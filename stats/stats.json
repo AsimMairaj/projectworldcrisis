@@ -44,50 +44,6 @@
             "agricultural_impact": "Severe crop failures in multiple regions",
             "affected_population": 7200000
         },
-        "health": {
-            "severity": 4,
-            "life_expectancy": 65.3,
-            "infant_mortality_rate": 44.0,
-            "maternal_mortality_ratio": 295,
-            "access_to_healthcare_percentage": 45.0,
-            "malaria_incidence": "High",
-            "cholera_outbreaks": "Recurring"
-        },
-        "education": {
-            "severity": 4,
-            "literacy_rate": 60.7,
-            "primary_school_enrollment": 68.0,
-            "out_of_school_children": 3200000,
-            "education_disruption": "Severe due to ongoing conflict"
-        },
-        "water_sanitation": {
-            "severity": 4,
-            "access_to_clean_water_percentage": 60.0,
-            "access_to_sanitation_percentage": 35.0,
-            "open_defecation_percentage": 23.0
-        },
-        "economy": {
-            "severity": 5,
-            "gdp_per_capita_usd": 752,
-            "unemployment_rate": 19.5,
-            "inflation_rate": 138.0,
-            "currency": "Sudanese Pound (SDG)",
-            "economic_status": "Severe crisis due to conflict and sanctions"
-        },
-        "humanitarian_needs": {
-            "severity": 5,
-            "people_in_need": 24800000,
-            "humanitarian_access": "Severely restricted",
-            "funding_gap_percentage": 62.0,
-            "priority_needs": ["Food security", "Healthcare", "Shelter", "Water", "Protection"]
-        },
-        "climate_vulnerability": {
-            "severity": 4,
-            "climate_risk_index": "High",
-            "desertification_risk": "Very High",
-            "flood_risk": "Moderate",
-            "temperature_increase_trend": 1.2
-        },
         "crisis_summary": "Sudan faces a severe humanitarian catastrophe with ongoing armed conflict, mass displacement, food insecurity, drought, and economic collapse. Over half the population requires humanitarian assistance.",
         "last_updated": "2024-11"
     }
