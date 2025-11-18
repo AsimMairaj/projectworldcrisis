@@ -22,13 +22,30 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              
+              {
+                "glob": "*.{js,css}",
+                "input": "node_modules/leaflet/dist",
+                "output": "/leaflet/" 
+              },
+              
+              {
+                "glob": "**/*",
+                "input": "node_modules/leaflet/dist/images",
+                "output": "/assets/images/"
               }
             ],
             "styles": [
               "src/styles.css"
             ],
+            "scripts": [ 
+            ],
             "server": "src/main.server.ts",
             "outputMode": "server",
+            "externalDependencies": [
+              "leaflet"
+            ],
             "ssr": {
               "entry": "src/server.ts"
             }
@@ -93,5 +110,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
