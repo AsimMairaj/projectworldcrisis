@@ -1,0 +1,110 @@
+<!-- Liquid Glass Mode Button - Bottom Left Corner -->
+<div class="fixed bottom-6 left-6 z-50 transition-all duration-300 ease-out" (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()" (click)="openDialog()">
+
+  <!-- Glassy Button Container -->
+  <div
+    class="relative flex items-center rounded-full cursor-pointer select-none overflow-hidden backdrop-blur-2xl bg-white/20 border border-white/30 transition-all duration-300"
+    [class.pr-4]="isHovered">
+
+    <!-- Background gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
+
+    <!-- "Mode" Label -->
+    <!-- <div class="relative z-10 mr-1 text-sm mb-[2px] font-medium text-white/80 drop-shadow-md">
+      Mode
+    </div> -->
+
+    <!-- Icon -->
+    <div class="relative ml-1 text-xl z-10 transition-transform duration-300" [class.scale-110]="isHovered">
+      {{ currentMode.icon }}
+    </div>
+
+    <!-- Mode Name - Expands on hover -->
+    <div
+      class="relative z-10 ml-1 font-semibold text-white text-lg whitespace-nowrap overflow-hidden transition-all duration-300 drop-shadow-lg"
+      [style.max-width]="isHovered ? '200px' : '0px'" [style.opacity]="isHovered ? '1' : '0'">
+      {{ currentMode.name }}
+    </div>
+
+
+  </div>
+</div>
+
+<!-- Mode Selection Dialog -->
+<div *ngIf="isDialogOpen" @fadeInOut class="fixed inset-0 w-screen h-screen z-[9999] flex justify-center items-center">
+
+  <!-- Frosted glass blur backdrop -->
+  <div class="absolute inset-0 w-full h-full backdrop-blur-xl bg-black/10" (click)="closeDialog()"></div>
+
+  <!-- Dialog Container -->
+  <div @slideIn
+    class="relative w-full max-w-[600px] h-[600px] mx-4 z-10 rounded-3xl shadow-[0_20px_60px_0_rgba(0,0,0,0.3)] overflow-hidden">
+
+    <!-- White Background Layer (for future animations) -->
+    <div class="absolute inset-0 bg-white z-0">
+      <!-- Animation layer placeholder - will be implemented later -->
+    </div>
+
+    <!-- Front Layer with Mode Wheel -->
+    <div class="absolute inset-0 z-10 flex flex-col">
+
+      <!-- Header -->
+      <div class="flex-shrink-0 px-8 pt-8 pb-4 bg-gradient-to-b from-white/95 to-transparent backdrop-blur-sm">
+        <h2 class="text-3xl font-bold text-gray-800 text-center">Select Mode</h2>
+      </div>
+
+      <!-- Scrollable Mode Wheel Container -->
+      <div
+        class="mode-scroll-container flex-1 overflow-y-scroll overflow-x-hidden px-8 py-20 scroll-smooth"
+        (scroll)="onScroll($event)"
+        style="scroll-snap-type: y mandatory; -webkit-overflow-scrolling: touch;">
+
+        <!-- Padding top to center first item -->
+        <div class="h-[200px]"></div>
+
+        <!-- Mode Items -->
+        <div
+          *ngFor="let mode of modes; let i = index"
+          class="mode-item mb-8 cursor-pointer transition-all duration-500 ease-out"
+          [style.transform]="getItemTransform(i)"
+          [style.opacity]="getItemOpacity(i)"
+          (click)="scrollToMode(i); selectMode(mode)"
+          style="scroll-snap-align: center; perspective: 1000px;">
+
+          <div class="flex flex-col items-center text-center py-6 px-8 rounded-2xl transition-all duration-300"
+               [class.scale-110]="focusedModeIndex === i"
+               [class.bg-gray-50]="focusedModeIndex === i">
+
+            <!-- Icon -->
+            <div class="text-6xl mb-4 transition-transform duration-300"
+                 [class.scale-125]="focusedModeIndex === i">
+              {{ mode.icon }}
+            </div>
+
+            <!-- Name -->
+            <h3 class="text-3xl font-bold mb-2 transition-all duration-300"
+                [class.text-gray-900]="focusedModeIndex === i"
+                [class.text-gray-500]="focusedModeIndex !== i">
+              {{ mode.name }}
+            </h3>
+
+            <!-- Description - only show for focused item -->
+            <p class="text-sm text-gray-600 max-w-[300px] transition-all duration-300"
+               [class.opacity-100]="focusedModeIndex === i"
+               [class.opacity-0]="focusedModeIndex !== i"
+               [class.max-h-20]="focusedModeIndex === i"
+               [class.max-h-0]="focusedModeIndex !== i">
+              {{ mode.description }}
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Padding bottom to center last item -->
+        <div class="h-[200px]"></div>
+      </div>
+
+    </div>
+  </div>
+</div>

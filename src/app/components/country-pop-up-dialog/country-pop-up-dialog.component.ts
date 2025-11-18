@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter, OnInit, HostListener, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import statsData from '../../../../stats/stats.json';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 interface CountryData {
   country: string;
@@ -33,6 +34,18 @@ interface CardInfo {
 @Component({
   selector: 'app-country-pop-up-dialog',
   standalone: true,
+  animations: [
+    trigger('fadeInOut', [
+      state('void', style({
+        opacity: 0
+      })),
+      state('*', style({
+        opacity: 1
+      })),
+      transition('void => *', animate('300ms ease-out')),
+      transition('* => void', animate('300ms ease-out'))
+    ]),
+  ],
   imports: [CommonModule],
   templateUrl: './country-pop-up-dialog.component.html',
   styleUrls: ['./country-pop-up-dialog.component.css']

@@ -4,10 +4,11 @@ import { WorldMapComponent } from './components/world-map/world-map.component';
 import { WelcomeDialogComponent } from './components/welcome-dialog/welcome-dialog.component';
 import { OceanBackgroundComponent } from './components/ocean-background/ocean-background.component';
 import { CountryPopUpDialogComponent } from './components/country-pop-up-dialog/country-pop-up-dialog.component';
+import { ModeSelectionComponent } from './components/mode-selection/mode-selection.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, WorldMapComponent, WelcomeDialogComponent, OceanBackgroundComponent, CountryPopUpDialogComponent],
+  imports: [RouterOutlet, WorldMapComponent, WelcomeDialogComponent, OceanBackgroundComponent, CountryPopUpDialogComponent, ModeSelectionComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
