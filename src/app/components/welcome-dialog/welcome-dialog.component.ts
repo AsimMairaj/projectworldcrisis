@@ -1,6 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+
+interface AnimatedLine {
+  id: number;
+  color: string;
+  x: number;
+  y: number;
+  rotation: number;
+  targetX: number;
+  targetY: number;
+  targetRotation: number;
+}
 
 @Component({
   selector: 'app-welcome-dialog',
@@ -20,8 +31,12 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ])
   ]
 })
-export class WelcomeDialogComponent {
+export class WelcomeDialogComponent implements OnInit {
   isVisible = true;
+
+  ngOnInit() { }
+
+  startAnimation() { }
 
   close() {
     this.isVisible = false;
