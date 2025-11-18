@@ -1,0 +1,50 @@
+[
+    {
+        "country": "Sudan",
+        "iso_a3": "SDN",
+        "capital": "Khartoum",
+        "population": 48109006,
+        "area_km2": 1886068,
+        "region": "North Africa",
+        "poverty": {
+            "severity": 4,
+            "mpi": 0.317,
+            "mpi_description": "31.7% severe deprivation",
+            "poverty_headcount_ratio": 46.5,
+            "extreme_poverty_percentage": 20.0,
+            "gini_coefficient": 34.2
+        },
+        "hunger": {
+            "severity": 4,
+            "ghi": 25.9,
+            "ghi_category": "Serious",
+            "ghi_description": "Global Hunger Index indicates serious hunger levels",
+            "undernourishment_percentage": 19.0,
+            "child_stunting_percentage": 38.2,
+            "child_wasting_percentage": 16.3,
+            "child_mortality_rate": 5.4
+        },
+        "conflict": {
+            "severity": 5,
+            "civilian_deaths_12mo": 5800,
+            "displaced_persons": 8000000,
+            "conflict_status": "Active Armed Conflict",
+            "conflict_description": "Ongoing civil war between Sudanese Armed Forces (SAF) and Rapid Support Forces (RSF) since April 2023",
+            "refugees": 1100000,
+            "internally_displaced": 6900000,
+            "conflict_severity": "Critical",
+            "affected_regions": ["Khartoum", "Darfur", "Kordofan", "Blue Nile"]
+        },
+        "drought": {
+            "severity": 4,
+            "spei": -1.6,
+            "spei_description": "Standardized Precipitation-Evapotranspiration Index - Moderate to severe drought",
+            "drought_severity": "Moderate-Severe",
+            "water_stress_level": "High",
+            "agricultural_impact": "Severe crop failures in multiple regions",
+            "affected_population": 7200000
+        },
+        "crisis_summary": "Sudan faces a severe humanitarian catastrophe with ongoing armed conflict, mass displacement, food insecurity, drought, and economic collapse. Over half the population requires humanitarian assistance.",
+        "last_updated": "2024-11"
+    }
+]

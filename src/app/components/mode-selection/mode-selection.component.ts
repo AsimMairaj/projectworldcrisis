@@ -1,14 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-
-export interface Mode {
-  id: string;
-  name: string;
-  icon: string;
-  description: string;
-  color: string;
-}
+import { ModeService, Mode } from '../../services/mode.service';
 
 @Component({
   selector: 'app-mode-selection',
@@ -84,7 +77,11 @@ export class ModeSelectionComponent {
     }
   ];
 
-  currentMode: Mode = this.modes[0];
+  constructor(private modeService: ModeService) {}
+
+  get currentMode(): Mode {
+    return this.modeService.getCurrentMode();
+  }
 
   openDialog() {
     this.isDialogOpen = true;
@@ -95,7 +92,7 @@ export class ModeSelectionComponent {
   }
 
   selectMode(mode: Mode) {
-    this.currentMode = mode;
+    this.modeService.setCurrentMode(mode);
     this.closeDialog();
   }
 
