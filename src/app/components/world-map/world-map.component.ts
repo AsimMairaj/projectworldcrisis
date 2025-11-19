@@ -1,4 +1,4 @@
-import { Component, PLATFORM_ID, Inject, AfterViewInit, OnDestroy } from "@angular/core";
+import { Component, PLATFORM_ID, Inject, AfterViewInit, OnDestroy, Output, EventEmitter } from "@angular/core";
 import { isPlatformBrowser } from '@angular/common';
 import * as maplibregl from 'maplibre-gl';
 import { ModeService, Mode } from '../../services/mode.service';
@@ -12,6 +12,8 @@ import { Subscription } from 'rxjs';
   styleUrls: ["./world-map.component.css"],
 })
 export class WorldMapComponent implements AfterViewInit, OnDestroy {
+  @Output() countryClicked = new EventEmitter<string>();
+
   private map: maplibregl.Map | undefined;
   private modeSubscription: Subscription | undefined;
   private currentMode: Mode | undefined;
@@ -47,6 +49,7 @@ export class WorldMapComponent implements AfterViewInit, OnDestroy {
       this.map.on('load', () => {
         this.setupCountryLayer();
         this.subscribeModeChanges();
+        this.setupCountryClickHandler();
       });
     } catch (error) {
       console.error('Error initializing map:', error);
@@ -111,6 +114,34 @@ export class WorldMapComponent implements AfterViewInit, OnDestroy {
       // Update the map layer only if it has valid data
       if (this.map && this.map.getLayer('country-fill') && colorExpression.length >= 4) {
         this.map.setPaintProperty('country-fill', 'fill-color', colorExpression);
+      }
+    });
+  }
+
+  private setupCountryClickHandler(): void {
+    if (!this.map) return;
+
+    // Change cursor to pointer when hovering over countries
+    this.map.on('mouseenter', 'country-fill', () => {
+      if (this.map) {
+        this.map.getCanvas().style.cursor = 'pointer';
+      }
+    });
+
+    // Change cursor back when leaving countries
+    this.map.on('mouseleave', 'country-fill', () => {
+      if (this.map) {
+        this.map.getCanvas().style.cursor = '';
+      }
+    });
+
+    // Handle country clicks
+    this.map.on('click', 'country-fill', (e) => {
+      if (e.features && e.features.length > 0) {
+        const countryName = e.features[0].properties?.['name'];
+        if (countryName) {
+          this.countryClicked.emit(countryName);
+        }
       }
     });
   }

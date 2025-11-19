@@ -1,7 +1,6 @@
-<div class="fixed inset-0 z-50 flex items-center justify-center p-4" *ngIf="countryData" (wheel)="onScroll($event)"
-  @fadeInOut>
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4" *ngIf="countryData" (wheel)="onScroll($event)">
   <!-- Backdrop -->
-  <div class="absolute inset-0 bg-black bg-opacity-50" (click)="close()"></div>
+  <div class="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300" (click)="close()"></div>
 
   <!-- Dialog Container -->
   <div class="relative w-full max-w-2xl h-[80vh] flex flex-col">
@@ -32,7 +31,7 @@
       <div class="h-full">
         <!-- Poverty Card -->
         <div id="card-0"
-          class="h-full {{ getSeverityBackgroundClass(countryData.poverty.severity) }} backdrop-blur-md rounded-2xl p-5 shadow-xl mb-4"
+          class="h-full {{ getSeverityBackgroundClass(countryData.poverty.severity) }} rounded-2xl p-5 shadow-xl mb-4"
           [class.opacity-100]="currentCardIndex === 0" [class.opacity-0]="currentCardIndex !== 0"
           [class.pointer-events-none]="currentCardIndex !== 0" style="transition: opacity 0.5s ease-in-out;">
           <div class="flex justify-between items-start mb-3">
@@ -75,7 +74,7 @@
 
         <!-- Hunger Card -->
         <div id="card-1"
-          class="absolute inset-0 h-full {{ getSeverityBackgroundClass(countryData.hunger.severity) }} backdrop-blur-md rounded-2xl p-5 shadow-xl"
+          class="absolute inset-0 h-full {{ getSeverityBackgroundClass(countryData.hunger.severity) }} rounded-2xl p-5 shadow-xl"
           [class.opacity-100]="currentCardIndex === 1" [class.opacity-0]="currentCardIndex !== 1"
           [class.pointer-events-none]="currentCardIndex !== 1" style="transition: opacity 0.5s ease-in-out;">
           <div class="flex justify-between items-start mb-3">
@@ -122,7 +121,7 @@
 
         <!-- Conflict Card -->
         <div id="card-2"
-          class="absolute inset-0 h-full {{ getSeverityBackgroundClass(countryData.conflict.severity) }} backdrop-blur-md rounded-2xl p-5 shadow-xl"
+          class="absolute inset-0 h-full {{ getSeverityBackgroundClass(countryData.conflict.severity) }} rounded-2xl p-5 shadow-xl"
           [class.opacity-100]="currentCardIndex === 2" [class.opacity-0]="currentCardIndex !== 2"
           [class.pointer-events-none]="currentCardIndex !== 2" style="transition: opacity 0.5s ease-in-out;">
           <div class="flex justify-between items-start mb-3">
@@ -176,7 +175,7 @@
 
         <!-- Drought Card -->
         <div id="card-3"
-          class="absolute inset-0 h-full {{ getSeverityBackgroundClass(countryData.drought.severity) }} backdrop-blur-md rounded-2xl p-5 shadow-xl"
+          class="absolute inset-0 h-full {{ getSeverityBackgroundClass(countryData.drought.severity) }} rounded-2xl p-5 shadow-xl"
           [class.opacity-100]="currentCardIndex === 3" [class.opacity-0]="currentCardIndex !== 3"
           [class.pointer-events-none]="currentCardIndex !== 3" style="transition: opacity 0.5s ease-in-out;">
           <div class="flex justify-between items-start mb-3">
