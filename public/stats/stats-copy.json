@@ -1,0 +1,502 @@
+[
+  {
+    "country": "Indonesia",
+    "iso_a3": "IDN",
+    "capital": "Jakarta",
+    "population": 277534122,
+    "area_km2": 1904569,
+    "region": "Southeast Asia",
+    "poverty": {
+      "severity": 4,
+      "mpi": 0.304,
+      "mpi_description": "24.3% severe deprivation",
+      "poverty_headcount_ratio": 23.3,
+      "extreme_poverty_percentage": 30.9,
+      "gini_coefficient": 32
+    },
+    "hunger": {
+      "severity": 3,
+      "ghi": 35.2,
+      "ghi_category": "Moderate",
+      "ghi_description": "Global Hunger Index indicates moderate hunger levels",
+      "undernourishment_percentage": 10.7,
+      "child_stunting_percentage": 10.5,
+      "child_wasting_percentage": 8.1,
+      "child_mortality_rate": 7.7
+    },
+    "conflict": {
+      "severity": 2,
+      "civilian_deaths_12mo": 439,
+      "displaced_persons": 33418,
+      "conflict_status": "Tensions",
+      "conflict_description": "Political tensions and sporadic violence",
+      "refugees": 1233,
+      "internally_displaced": 14782,
+      "conflict_severity": "Moderate",
+      "affected_regions": [
+        "Limited areas"
+      ]
+    },
+    "drought": {
+      "severity": 3,
+      "spei": -1.7,
+      "spei_description": "Moderate drought",
+      "drought_severity": "Moderate",
+      "water_stress_level": "High",
+      "agricultural_impact": "Moderate crop impact",
+      "affected_population": 41630118
+    },
+    "crisis_summary": "Indonesia faces severe humanitarian challenges including poverty, food security concerns, and development needs.",
+    "last_updated": "2024-11"
+  },
+  {
+    "country": "Malaysia",
+    "iso_a3": "MYS",
+    "capital": "Kuala Lumpur",
+    "population": 34308525,
+    "area_km2": 330803,
+    "region": "Southeast Asia",
+    "poverty": {
+      "severity": 3,
+      "mpi": 0.567,
+      "mpi_description": "49.5% severe deprivation",
+      "poverty_headcount_ratio": 68.1,
+      "extreme_poverty_percentage": 23.1,
+      "gini_coefficient": 43.8
+    },
+    "hunger": {
+      "severity": 2,
+      "ghi": 35.2,
+      "ghi_category": "Low",
+      "ghi_description": "Global Hunger Index indicates low hunger levels",
+      "undernourishment_percentage": 25.1,
+      "child_stunting_percentage": 21.7,
+      "child_wasting_percentage": 3.3,
+      "child_mortality_rate": 5.5
+    },
+    "conflict": {
+      "severity": 2,
+      "civilian_deaths_12mo": 458,
+      "displaced_persons": 32904,
+      "conflict_status": "Tensions",
+      "conflict_description": "Political tensions and sporadic violence",
+      "refugees": 7324,
+      "internally_displaced": 11260,
+      "conflict_severity": "Moderate",
+      "affected_regions": [
+        "Limited areas"
+      ]
+    },
+    "drought": {
+      "severity": 2,
+      "spei": 0.3,
+      "spei_description": "Normal to wet conditions",
+      "drought_severity": "Low",
+      "water_stress_level": "Medium",
+      "agricultural_impact": "Minimal impact",
+      "affected_population": 1715426
+    },
+    "crisis_summary": "Malaysia faces moderate humanitarian challenges including poverty, food security concerns, and development needs.",
+    "last_updated": "2024-11"
+  },
+  {
+    "country": "Chile",
+    "iso_a3": "CHL",
+    "capital": "Santiago",
+    "population": 19629590,
+    "area_km2": 756102,
+    "region": "South America",
+    "poverty": {
+      "severity": 4,
+      "mpi": 0.386,
+      "mpi_description": "26.0% severe deprivation",
+      "poverty_headcount_ratio": 65,
+      "extreme_poverty_percentage": 25.1,
+      "gini_coefficient": 29
+    },
+    "hunger": {
+      "severity": 2,
+      "ghi": 16,
+      "ghi_category": "Low",
+      "ghi_description": "Global Hunger Index indicates low hunger levels",
+      "undernourishment_percentage": 16.7,
+      "child_stunting_percentage": 19,
+      "child_wasting_percentage": 9,
+      "child_mortality_rate": 6.7
+    },
+    "conflict": {
+      "severity": 2,
+      "civilian_deaths_12mo": 87,
+      "displaced_persons": 5265,
+      "conflict_status": "Tensions",
+      "conflict_description": "Political tensions and sporadic violence",
+      "refugees": 4792,
+      "internally_displaced": 6080,
+      "conflict_severity": "Moderate",
+      "affected_regions": [
+        "Limited areas"
+      ]
+    },
+    "drought": {
+      "severity": 3,
+      "spei": 0.9,
+      "spei_description": "Moderate drought",
+      "drought_severity": "Moderate",
+      "water_stress_level": "High",
+      "agricultural_impact": "Moderate crop impact",
+      "affected_population": 2944439
+    },
+    "crisis_summary": "Chile faces severe humanitarian challenges including poverty, food security concerns, and development needs.",
+    "last_updated": "2024-11"
+  },
+  {
+    "country": "Bolivia",
+    "iso_a3": "BOL",
+    "capital": "La Paz",
+    "population": 12388571,
+    "area_km2": 1098581,
+    "region": "South America",
+    "poverty": {
+      "severity": 4,
+      "mpi": 0.246,
+      "mpi_description": "57.7% severe deprivation",
+      "poverty_headcount_ratio": 62.4,
+      "extreme_poverty_percentage": 19.5,
+      "gini_coefficient": 42.7
+    },
+    "hunger": {
+      "severity": 2,
+      "ghi": 37,
+      "ghi_category": "Low",
+      "ghi_description": "Global Hunger Index indicates low hunger levels",
+      "undernourishment_percentage": 26.1,
+      "child_stunting_percentage": 16.1,
+      "child_wasting_percentage": 6.9,
+      "child_mortality_rate": 7.7
+    },
+    "conflict": {
+      "severity": 3,
+      "civilian_deaths_12mo": 263,
+      "displaced_persons": 913828,
+      "conflict_status": "Tensions",
+      "conflict_description": "Political tensions and sporadic violence",
+      "refugees": 64864,
+      "internally_displaced": 919510,
+      "conflict_severity": "High",
+      "affected_regions": [
+        "Multiple regions affected"
+      ]
+    },
+    "drought": {
+      "severity": 2,
+      "spei": 0.5,
+      "spei_description": "Normal to wet conditions",
+      "drought_severity": "Low",
+      "water_stress_level": "Medium",
+      "agricultural_impact": "Minimal impact",
+      "affected_population": 619429
+    },
+    "crisis_summary": "Bolivia faces severe humanitarian challenges including poverty, food security concerns, and development needs.",
+    "last_updated": "2024-11"
+  },
+  {
+    "country": "Peru",
+    "iso_a3": "PER",
+    "capital": "Lima",
+    "population": 34352719,
+    "area_km2": 1285216,
+    "region": "South America",
+    "poverty": {
+      "severity": 3,
+      "mpi": 0.346,
+      "mpi_description": "38.1% severe deprivation",
+      "poverty_headcount_ratio": 65.9,
+      "extreme_poverty_percentage": 21.9,
+      "gini_coefficient": 30.4
+    },
+    "hunger": {
+      "severity": 2,
+      "ghi": 38.5,
+      "ghi_category": "Low",
+      "ghi_description": "Global Hunger Index indicates low hunger levels",
+      "undernourishment_percentage": 29.2,
+      "child_stunting_percentage": 11,
+      "child_wasting_percentage": 5.1,
+      "child_mortality_rate": 2.9
+    },
+    "conflict": {
+      "severity": 2,
+      "civilian_deaths_12mo": 479,
+      "displaced_persons": 19715,
+      "conflict_status": "Tensions",
+      "conflict_description": "Political tensions and sporadic violence",
+      "refugees": 1,
+      "internally_displaced": 4730,
+      "conflict_severity": "Moderate",
+      "affected_regions": [
+        "Limited areas"
+      ]
+    },
+    "drought": {
+      "severity": 3,
+      "spei": -1.6,
+      "spei_description": "Moderate drought",
+      "drought_severity": "Moderate",
+      "water_stress_level": "High",
+      "agricultural_impact": "Moderate crop impact",
+      "affected_population": 5152908
+    },
+    "crisis_summary": "Peru faces moderate humanitarian challenges including poverty, food security concerns, and development needs.",
+    "last_updated": "2024-11"
+  },
+  {
+    "country": "Argentina",
+    "iso_a3": "ARG",
+    "capital": "Buenos Aires",
+    "population": 45773884,
+    "area_km2": 2780400,
+    "region": "South America",
+    "poverty": {
+      "severity": 2,
+      "mpi": 0.38,
+      "mpi_description": "31.0% severe deprivation",
+      "poverty_headcount_ratio": 64.6,
+      "extreme_poverty_percentage": 18.4,
+      "gini_coefficient": 38.8
+    },
+    "hunger": {
+      "severity": 3,
+      "ghi": 30.1,
+      "ghi_category": "Moderate",
+      "ghi_description": "Global Hunger Index indicates moderate hunger levels",
+      "undernourishment_percentage": 11.7,
+      "child_stunting_percentage": 18.2,
+      "child_wasting_percentage": 10.8,
+      "child_mortality_rate": 7.3
+    },
+    "conflict": {
+      "severity": 2,
+      "civilian_deaths_12mo": 25,
+      "displaced_persons": 15498,
+      "conflict_status": "Tensions",
+      "conflict_description": "Political tensions and sporadic violence",
+      "refugees": 919,
+      "internally_displaced": 19995,
+      "conflict_severity": "Moderate",
+      "affected_regions": [
+        "Limited areas"
+      ]
+    },
+    "drought": {
+      "severity": 4,
+      "spei": -1.7,
+      "spei_description": "Severe drought conditions",
+      "drought_severity": "Severe",
+      "water_stress_level": "Extremely High",
+      "agricultural_impact": "Severe crop failures",
+      "affected_population": 13732165
+    },
+    "crisis_summary": "Argentina faces limited humanitarian challenges including poverty, food security concerns, and development needs.",
+    "last_updated": "2024-11"
+  },
+  {
+    "country": "Dhekelia Sovereign Base Area",
+    "iso_a3": "-99",
+    "capital": "Unknown",
+    "population": 1000000,
+    "area_km2": 10000,
+    "region": "Unknown",
+    "poverty": {
+      "severity": 3,
+      "mpi": 0.391,
+      "mpi_description": "48.5% severe deprivation",
+      "poverty_headcount_ratio": 35.7,
+      "extreme_poverty_percentage": 19.6,
+      "gini_coefficient": 51.3
+    },
+    "hunger": {
+      "severity": 3,
+      "ghi": 26.6,
+      "ghi_category": "Moderate",
+      "ghi_description": "Global Hunger Index indicates moderate hunger levels",
+      "undernourishment_percentage": 8.6,
+      "child_stunting_percentage": 30.1,
+      "child_wasting_percentage": 7.9,
+      "child_mortality_rate": 8.9
+    },
+    "conflict": {
+      "severity": 3,
+      "civilian_deaths_12mo": 208,
+      "displaced_persons": 5045213,
+      "conflict_status": "Tensions",
+      "conflict_description": "Political tensions and sporadic violence",
+      "refugees": 142075,
+      "internally_displaced": 1451510,
+      "conflict_severity": "High",
+      "affected_regions": [
+        "Multiple regions affected"
+      ]
+    },
+    "drought": {
+      "severity": 4,
+      "spei": -1.2,
+      "spei_description": "Severe drought conditions",
+      "drought_severity": "Severe",
+      "water_stress_level": "Extremely High",
+      "agricultural_impact": "Severe crop failures",
+      "affected_population": 300000
+    },
+    "crisis_summary": "Dhekelia Sovereign Base Area faces moderate humanitarian challenges including poverty, food security concerns, and development needs.",
+    "last_updated": "2024-11"
+  },
+  {
+    "country": "Cyprus",
+    "iso_a3": "CYP",
+    "capital": "Nicosia",
+    "population": 1260138,
+    "area_km2": 9251,
+    "region": "Middle East",
+    "poverty": {
+      "severity": 4,
+      "mpi": 0.282,
+      "mpi_description": "28.2% severe deprivation",
+      "poverty_headcount_ratio": 67.9,
+      "extreme_poverty_percentage": 27.7,
+      "gini_coefficient": 46.5
+    },
+    "hunger": {
+      "severity": 3,
+      "ghi": 13.2,
+      "ghi_category": "Moderate",
+      "ghi_description": "Global Hunger Index indicates moderate hunger levels",
+      "undernourishment_percentage": 18.9,
+      "child_stunting_percentage": 31.8,
+      "child_wasting_percentage": 14.1,
+      "child_mortality_rate": 9.4
+    },
+    "conflict": {
+      "severity": 1,
+      "civilian_deaths_12mo": 91,
+      "displaced_persons": 48317,
+      "conflict_status": "Stable",
+      "conflict_description": "Relatively stable security situation",
+      "refugees": 5858,
+      "internally_displaced": 10061,
+      "conflict_severity": "Low",
+      "affected_regions": [
+        "Limited areas"
+      ]
+    },
+    "drought": {
+      "severity": 3,
+      "spei": -2,
+      "spei_description": "Moderate drought",
+      "drought_severity": "Moderate",
+      "water_stress_level": "High",
+      "agricultural_impact": "Moderate crop impact",
+      "affected_population": 189021
+    },
+    "crisis_summary": "Cyprus faces severe humanitarian challenges including poverty, food security concerns, and development needs.",
+    "last_updated": "2024-11"
+  },
+  {
+    "country": "India",
+    "iso_a3": "IND",
+    "capital": "New Delhi",
+    "population": 1428627663,
+    "area_km2": 3287263,
+    "region": "South Asia",
+    "poverty": {
+      "severity": 3,
+      "mpi": 0.541,
+      "mpi_description": "27.1% severe deprivation",
+      "poverty_headcount_ratio": 32.4,
+      "extreme_poverty_percentage": 24.4,
+      "gini_coefficient": 54.6
+    },
+    "hunger": {
+      "severity": 3,
+      "ghi": 30.9,
+      "ghi_category": "Moderate",
+      "ghi_description": "Global Hunger Index indicates moderate hunger levels",
+      "undernourishment_percentage": 12.6,
+      "child_stunting_percentage": 11.2,
+      "child_wasting_percentage": 4.2,
+      "child_mortality_rate": 8.1
+    },
+    "conflict": {
+      "severity": 2,
+      "civilian_deaths_12mo": 247,
+      "displaced_persons": 11183,
+      "conflict_status": "Tensions",
+      "conflict_description": "Political tensions and sporadic violence",
+      "refugees": 3829,
+      "internally_displaced": 2113,
+      "conflict_severity": "Moderate",
+      "affected_regions": [
+        "Limited areas"
+      ]
+    },
+    "drought": {
+      "severity": 4,
+      "spei": -1.9,
+      "spei_description": "Severe drought conditions",
+      "drought_severity": "Severe",
+      "water_stress_level": "Extremely High",
+      "agricultural_impact": "Severe crop failures",
+      "affected_population": 428588299
+    },
+    "crisis_summary": "India faces moderate humanitarian challenges including poverty, food security concerns, and development needs.",
+    "last_updated": "2024-11"
+  },
+  {
+    "country": "China",
+    "iso_a3": "CHN",
+    "capital": "Beijing",
+    "population": 1425671352,
+    "area_km2": 9596961,
+    "region": "East Asia",
+    "poverty": {
+      "severity": 4,
+      "mpi": 0.418,
+      "mpi_description": "25.0% severe deprivation",
+      "poverty_headcount_ratio": 45.5,
+      "extreme_poverty_percentage": 27.1,
+      "gini_coefficient": 31.9
+    },
+    "hunger": {
+      "severity": 4,
+      "ghi": 39.8,
+      "ghi_category": "Serious",
+      "ghi_description": "Global Hunger Index indicates serious hunger levels",
+      "undernourishment_percentage": 16.3,
+      "child_stunting_percentage": 27.6,
+      "child_wasting_percentage": 10.8,
+      "child_mortality_rate": 5.8
+    },
+    "conflict": {
+      "severity": 2,
+      "civilian_deaths_12mo": 7,
+      "displaced_persons": 39387,
+      "conflict_status": "Tensions",
+      "conflict_description": "Political tensions and sporadic violence",
+      "refugees": 7241,
+      "internally_displaced": 18454,
+      "conflict_severity": "Moderate",
+      "affected_regions": [
+        "Limited areas"
+      ]
+    },
+    "drought": {
+      "severity": 4,
+      "spei": 0.7,
+      "spei_description": "Severe drought conditions",
+      "drought_severity": "Severe",
+      "water_stress_level": "Extremely High",
+      "agricultural_impact": "Severe crop failures",
+      "affected_population": 427701406
+    },
+    "crisis_summary": "China faces severe humanitarian challenges including poverty, food security concerns, and development needs.",
+    "last_updated": "2024-11"
+  }
+]

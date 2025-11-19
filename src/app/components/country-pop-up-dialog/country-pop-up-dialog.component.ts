@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter, OnInit, HostListener, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import statsData from '../../../../stats/stats.json';
+import statsData from '/Users/yusuf/OneDrive/Desktop/Desktop/asim_competition/code/projectworldcrisis/public/stats/stats.json';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { CountUpDirective } from './count-up.directive';
 
@@ -29,18 +29,6 @@ interface CardInfo {
 @Component({
   selector: 'app-country-pop-up-dialog',
   standalone: true,
-  animations: [
-    trigger('fadeInOut', [
-      state('void', style({
-        opacity: 0
-      })),
-      state('*', style({
-        opacity: 1
-      })),
-      transition('void => *', animate('300ms ease-out')),
-      transition('* => void', animate('300ms ease-out'))
-    ]),
-  ],
   imports: [CommonModule, CountUpDirective],
   templateUrl: './country-pop-up-dialog.component.html',
   styleUrls: ['./country-pop-up-dialog.component.css']
@@ -57,7 +45,7 @@ export class CountryPopUpDialogComponent implements OnInit, AfterViewInit {
 
   // Scroll sensitivity control
   private scrollAccumulator: number = 0;
-  private readonly scrollThreshold: number = 100; // Increase this value to reduce sensitivity
+  private readonly scrollThreshold: number = 200; // Increase this value to reduce sensitivity
 
   ngOnInit(): void {
     this.loadCountryData();
