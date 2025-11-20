@@ -5,6 +5,37 @@
   <app-world-map (countryClicked)="openCountryDialog($event)"></app-world-map>
   <app-mode-selection></app-mode-selection>
 
+  <!-- Severity Legend -->
+  <div class="fixed bottom-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-3 text-xs">
+    <div class="font-semibold mb-2 text-gray-700">Severity Level</div>
+    <div class="space-y-1">
+      <div class="flex items-center gap-2">
+        <div class="w-4 h-4 rounded" style="background-color: #4ade80;"></div>
+        <span class="text-gray-600">1 - Low</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-4 h-4 rounded" style="background-color: #60a5fa;"></div>
+        <span class="text-gray-600">2 - Moderate</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-4 h-4 rounded" style="background-color: #facc15;"></div>
+        <span class="text-gray-600">3 - Medium</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-4 h-4 rounded" style="background-color: #fb923c;"></div>
+        <span class="text-gray-600">4 - High</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-4 h-4 rounded" style="background-color: #f87171;"></div>
+        <span class="text-gray-600">5 - Critical</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-4 h-4 rounded" style="background-color: #9ca3af;"></div>
+        <span class="text-gray-600">No Data</span>
+      </div>
+    </div>
+  </div>
+
   <!-- Country Dialog -->
   @if (showCountryDialog()) {
     <app-country-pop-up-dialog

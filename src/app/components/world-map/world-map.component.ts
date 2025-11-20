@@ -43,7 +43,8 @@ export class WorldMapComponent implements AfterViewInit, OnDestroy {
         container: 'map', // container id
         style: 'https://demotiles.maplibre.org/globe.json', // style URL
         center: [0, 0], // starting position [lng, lat]
-        zoom: 2 // starting zoom
+        zoom: 2, // starting zoom
+        attributionControl: false // Remove attribution control
       });
 
       this.map.on('load', () => {
