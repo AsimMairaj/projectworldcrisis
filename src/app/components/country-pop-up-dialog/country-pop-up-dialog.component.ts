@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter, OnInit, HostListener, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import statsData from '/Users/asim/Desktop/projectglobal/projectworldcrisis/public/stats/stats.json';
+import statsData from '../../../../public/stats/stats.json';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { CountUpDirective } from './count-up.directive';
 
